@@ -46,7 +46,7 @@ interface IslandPostEnum {
     val endPostCode: Int
     val isJeJu: Boolean
     val isIsland: Boolean
-    var enumObject: (postCode: Int) -> IslandPostEnum
+    var enumObject: (Int) -> IslandPostEnum
 }
 
 /**
@@ -59,7 +59,7 @@ enum class HanJinIslandPostEnum(
     override val endPostCode: Int,
     override val isJeJu: Boolean,
     override val isIsland: Boolean,
-    override var enumObject: (postCode: Int) -> IslandPostEnum 
+    override var enumObject: (Int) -> IslandPostEnum 
 ) : IslandPostEnum {
     JEJU("HANJIN", "제주도", 63000, 63644, true, true, { postCode -> CourierCompanyFactory.HANJIN.findEnumObjectByPostCode(postCode) }),
     AREA01("HANJIN","인천 중구 섬지역",22386,22388,false,true,{ postCode -> CourierCompanyFactory.HANJIN.findEnumObjectByPostCode(postCode) }),
