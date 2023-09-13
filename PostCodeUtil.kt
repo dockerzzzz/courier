@@ -1,5 +1,6 @@
 /**
  * 택배사별 코드를 가져오기 위한 enum 객체 취득 팩토리 클래스
+ * (변동성이 극히 적은 데이터로 DB화 하지 않고 코드를 enum으로 관리)
  */
 enum class CourierCompany {
     HANJIN,CJLOGISTICS,LOTTEGLOGIS
