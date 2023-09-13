@@ -104,7 +104,7 @@ enum class CJIslandPostEnum(
     override val endPostCode: Int,
     override val isJeJu: Boolean,
     override val isIsland: Boolean,
-    override var enumObject: (postCode: Int) -> IslandPostEnum
+    override var enumObject: (Int) -> IslandPostEnum
 ) : IslandPostEnum {
     NONE("CJLOGISTICS", "NONE", 0, 0, false, false, { postCode -> CourierCompanyFactory.CJLOGISTICS.findEnumObjectByPostCode(postCode) });
 }
@@ -119,7 +119,7 @@ enum class LotteIslandPostEnum(
     override val endPostCode: Int,
     override val isJeJu: Boolean,
     override val isIsland: Boolean,
-    override var enumObject: (postCode: Int) -> IslandPostEnum
+    override var enumObject: (Int) -> IslandPostEnum
 ) : IslandPostEnum {
     NONE("LOTTEGLOGIS", "NONE", 0, 0, false, false, { postCode -> CourierCompanyFactory.LOTTEGLOGIS.findEnumObjectByPostCode(postCode) });
 }
